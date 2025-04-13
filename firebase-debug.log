@@ -1,0 +1,328 @@
+[debug] [2025-04-13T02:14:33.156Z] ----------------------------------------------------------------------
+[debug] [2025-04-13T02:14:33.157Z] Command:       /Users/propertyegypt/.nvm/versions/node/v18.0.0/bin/node /Users/propertyegypt/.nvm/versions/node/v18.0.0/bin/firebase deploy
+[debug] [2025-04-13T02:14:33.158Z] CLI Version:   13.18.0
+[debug] [2025-04-13T02:14:33.158Z] Platform:      darwin
+[debug] [2025-04-13T02:14:33.158Z] Node Version:  v18.0.0
+[debug] [2025-04-13T02:14:33.159Z] Time:          Sun Apr 13 2025 04:14:33 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-04-13T02:14:33.160Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-13T02:14:33.211Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-13T02:14:33.211Z] > authorizing via signed-in user (bassemmagdy21@gmail.com)
+[debug] [2025-04-13T02:14:33.212Z] [iam] checking project cextra-20099 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-04-13T02:14:33.213Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions [none]
+[debug] [2025-04-13T02:14:33.213Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:14:33.214Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-04-13T02:14:34.338Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions 200
+[debug] [2025-04-13T02:14:34.339Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-04-13T02:14:34.340Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-04-13T02:14:34.340Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-04-13T02:14:34.857Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-04-13T02:14:34.857Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'cextra-20099'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-04-13T02:14:38.339Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 [none]
+[debug] [2025-04-13T02:14:38.940Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 200
+[debug] [2025-04-13T02:14:38.940Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 {"projectId":"cextra-20099","projectNumber":"203424199926","displayName":"Cextra","name":"projects/cextra-20099","resources":{"hostingSite":"cextra-20099","locationId":"europe-west"},"state":"ACTIVE","etag":"1_cc5f4613-67ea-4cb4-9a4b-608d2a9adc98"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-04-13T02:14:38.944Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-04-13T02:14:38.944Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:14:38.948Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-04-13T02:14:38.949Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:14:38.953Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com [none]
+[debug] [2025-04-13T02:14:38.953Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:14:38.957Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com [none]
+[debug] [2025-04-13T02:14:38.957Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:14:40.176Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com 200
+[debug] [2025-04-13T02:14:40.176Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-04-13T02:14:40.237Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com 200
+[debug] [2025-04-13T02:14:40.237Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-04-13T02:14:40.240Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com 200
+[debug] [2025-04-13T02:14:40.240Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-04-13T02:14:40.241Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com 200
+[debug] [2025-04-13T02:14:40.241Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-04-13T02:14:40.242Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig [none]
+[debug] [2025-04-13T02:14:41.045Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig 200
+[debug] [2025-04-13T02:14:41.046Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig {"projectId":"cextra-20099","storageBucket":"cextra-20099.appspot.com","locationId":"europe-west"}
+[debug] [2025-04-13T02:14:41.048Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs [none]
+[debug] [2025-04-13T02:14:41.641Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs 200
+[debug] [2025-04-13T02:14:41.641Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs {}
+[debug] [2025-04-13T02:14:41.646Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-13T02:14:42.622Z] > [functions] package.json contents: {
+  "name": "rowy-backend-new",
+  "description": "cloud run instance for running Rowy's backend functionality",
+  "version": "1.9.3",
+  "private": true,
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon",
+    "test": "mocha test/index.test.js --exit",
+    "system-test": "NAME=Cloud mocha test/system.test.js --timeout=180000",
+    "lint": "eslint '**/*.js'",
+    "fix": "eslint --fix '**/*.js'",
+    "build": "tsc;cpy --cwd=src --parents '**/*.json' ../build/",
+    "deploy": "./deploy.sh --project"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "author": "Rowy Inc.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@google-cloud/logging": "^10.3.1",
+    "@google-cloud/secret-manager": "^4.1.4",
+    "algoliasearch": "^4.10.5",
+    "axios": "^0.21.4",
+    "cpy-cli": "^2.0.0",
+    "express": "^4.17.1",
+    "file-type": "^16.5.3",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.1.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.7",
+    "sucrase": "^3.31.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "20.11.24",
+    "firebase-tools": "^11.25.2",
+    "google-auth-library": "^8.8.0",
+    "husky": "^4.3.8",
+    "js-beautify": "^1.13.0",
+    "mocha": "^9.0.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0",
+    "pretty-quick": "^3.1.1",
+    "supertest": "^6.0.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.0",
+    "typescript": "^4.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
+[debug] [2025-04-13T02:14:42.622Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-04-13T02:14:42.625Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-13T02:14:42.637Z] Found firebase-functions binary at '/Users/propertyegypt/Downloads/backend-main/node_modules/.bin/firebase-functions'
+[info] Serving at port 8507
+
+[error] node:events:505
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8507
+    at Server.setupListenHandle [as _listen2] (node:net:1380:16)
+    at listenInCluster (node:net:1428:12)
+    at Server.listen (node:net:1516:7)
+    at Function.listen (/Users/propertyegypt/Downloads/backend-main/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/Users/propertyegypt/Downloads/backend-main/build/index.js:99:5)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Module._load (node:internal/modules/cjs/loader:827:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1407:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 8507
+}
+
+Node.js v18.0.0
+
+[debug] [2025-04-13T02:14:44.056Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8507/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8507 {"message":"request to http://localhost:8507/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8507","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[debug] [2025-04-13T02:14:44.058Z] FetchError: request to http://127.0.0.1:8507/__/functions.yaml failed, reason: socket hang up
+    at ClientRequest.<anonymous> (/Users/propertyegypt/.nvm/versions/node/v18.0.0/lib/node_modules/firebase-tools/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketOnEnd (node:_http_client:478:9)
+    at Socket.emit (node:events:539:35)
+    at Socket.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1344:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-04-13T02:15:18.502Z] ----------------------------------------------------------------------
+[debug] [2025-04-13T02:15:18.509Z] Command:       /Users/propertyegypt/.nvm/versions/node/v20.10.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2025-04-13T02:15:18.510Z] CLI Version:   12.4.2
+[debug] [2025-04-13T02:15:18.510Z] Platform:      darwin
+[debug] [2025-04-13T02:15:18.510Z] Node Version:  v20.10.0
+[debug] [2025-04-13T02:15:18.510Z] Time:          Sun Apr 13 2025 04:15:18 GMT+0200 (Eastern European Standard Time)
+[debug] [2025-04-13T02:15:18.510Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-13T02:15:18.565Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-13T02:15:18.565Z] > authorizing via signed-in user (bassemmagdy21@gmail.com)
+[debug] [2025-04-13T02:15:18.566Z] [iam] checking project cextra-20099 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-04-13T02:15:18.567Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions [none]
+[debug] [2025-04-13T02:15:18.567Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:15:18.567Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-04-13T02:15:19.627Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions 200
+[debug] [2025-04-13T02:15:19.627Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cextra-20099:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-04-13T02:15:19.628Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-04-13T02:15:19.628Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-04-13T02:15:20.628Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-04-13T02:15:20.629Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/cextra-20099/serviceAccounts/cextra-20099@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'cextra-20099'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-04-13T02:15:24.016Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 [none]
+[debug] [2025-04-13T02:15:24.498Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 200
+[debug] [2025-04-13T02:15:24.499Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099 {"projectId":"cextra-20099","projectNumber":"203424199926","displayName":"Cextra","name":"projects/cextra-20099","resources":{"hostingSite":"cextra-20099","locationId":"europe-west"},"state":"ACTIVE","etag":"1_cc5f4613-67ea-4cb4-9a4b-608d2a9adc98"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-04-13T02:15:24.502Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-04-13T02:15:24.502Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:15:24.504Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-04-13T02:15:24.504Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:15:24.506Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com [none]
+[debug] [2025-04-13T02:15:24.506Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:15:24.507Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com [none]
+[debug] [2025-04-13T02:15:24.508Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com x-goog-quota-user=projects/cextra-20099
+[debug] [2025-04-13T02:15:25.238Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com 200
+[debug] [2025-04-13T02:15:25.238Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-04-13T02:15:25.648Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com 200
+[debug] [2025-04-13T02:15:25.648Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-04-13T02:15:25.675Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com 200
+[debug] [2025-04-13T02:15:25.675Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-04-13T02:15:25.700Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com 200
+[debug] [2025-04-13T02:15:25.700Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/cextra-20099/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-04-13T02:15:25.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig [none]
+[debug] [2025-04-13T02:15:26.224Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig 200
+[debug] [2025-04-13T02:15:26.224Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cextra-20099/adminSdkConfig {"projectId":"cextra-20099","storageBucket":"cextra-20099.appspot.com","locationId":"europe-west"}
+[debug] [2025-04-13T02:15:26.226Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs [none]
+[debug] [2025-04-13T02:15:26.799Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs 200
+[debug] [2025-04-13T02:15:26.800Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/cextra-20099/configs {}
+[debug] [2025-04-13T02:15:26.802Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-13T02:15:27.642Z] > [functions] package.json contents: {
+  "name": "rowy-backend-new",
+  "description": "cloud run instance for running Rowy's backend functionality",
+  "version": "1.9.3",
+  "private": true,
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon",
+    "test": "mocha test/index.test.js --exit",
+    "system-test": "NAME=Cloud mocha test/system.test.js --timeout=180000",
+    "lint": "eslint '**/*.js'",
+    "fix": "eslint --fix '**/*.js'",
+    "build": "tsc;cpy --cwd=src --parents '**/*.json' ../build/",
+    "deploy": "./deploy.sh --project"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "author": "Rowy Inc.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@google-cloud/logging": "^10.3.1",
+    "@google-cloud/secret-manager": "^4.1.4",
+    "algoliasearch": "^4.10.5",
+    "axios": "^0.21.4",
+    "cpy-cli": "^2.0.0",
+    "express": "^4.17.1",
+    "file-type": "^16.5.3",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.1.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.7",
+    "sucrase": "^3.31.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "20.11.24",
+    "firebase-tools": "^11.25.2",
+    "google-auth-library": "^8.8.0",
+    "husky": "^4.3.8",
+    "js-beautify": "^1.13.0",
+    "mocha": "^9.0.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0",
+    "pretty-quick": "^3.1.1",
+    "supertest": "^6.0.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.0",
+    "typescript": "^4.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
+[debug] [2025-04-13T02:15:27.642Z] Building nodejs source
+[info] i  functions: Loading and anaylzing source code for codebase default to determine what to deploy 
+[debug] [2025-04-13T02:15:27.643Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-13T02:15:27.655Z] Found firebase-functions binary at '/Users/propertyegypt/Downloads/backend-main/node_modules/.bin/firebase-functions'
+[info] Serving at port 8333
+
+[error] node:events:492
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8333
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (/Users/propertyegypt/Downloads/backend-main/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/Users/propertyegypt/Downloads/backend-main/build/index.js:99:5)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 8333
+}
+
+Node.js v20.10.0
+
+[debug] [2025-04-13T02:15:29.579Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8333/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8333/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[debug] [2025-04-13T02:15:29.581Z] FetchError: request to http://127.0.0.1:8333/__/functions.yaml failed, reason: socket hang up
+    at ClientRequest.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/node-fetch/lib/index.js:1505:11)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at Socket.socketOnEnd (node:_http_client:519:9)
+    at Socket.emit (node:events:526:35)
+    at Socket.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1589:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
