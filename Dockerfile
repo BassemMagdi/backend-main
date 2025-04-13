@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-slim AS builder
 
 # Create and change to the app directory.
 WORKDIR /home/node/app
